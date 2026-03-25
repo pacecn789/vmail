@@ -36,7 +36,7 @@ jobs:
     steps:
       # 检出代码
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # 设置 pnpm (版本由根目录 package.json 的 "packageManager" 字段决定)
       - name: Setup pnpm
@@ -44,7 +44,7 @@ jobs:
 
       # 设置 Node.js 环境
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: 'package.json'
           cache: 'pnpm'
